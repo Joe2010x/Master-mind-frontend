@@ -1,0 +1,10 @@
+.BallCollection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.EntryCollection {
+    max-height: 80vh;
+    overflow-y: auto;
+}

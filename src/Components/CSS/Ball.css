@@ -1,0 +1,14 @@
+.BallBackground {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem;
+}
+
+.BallCore {
+    width: 80%;
+    height: 80%;
+    border-radius: 5rem;
+}

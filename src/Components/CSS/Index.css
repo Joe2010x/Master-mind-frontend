@@ -1,0 +1,24 @@
+.Index {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.IndexInner {
+    width: 60%;
+    height: 60%;
+    border-radius: 5rem;
+    /* padding-right: 0.5rem; */
+    font: 3em sans-serif;
+    font-style: italic;
+    background-color: darkkhaki;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

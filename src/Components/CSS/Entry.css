@@ -1,0 +1,24 @@
+.Entry {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Confirm {
+    background-color: #00008B;
+    border: none;
+    color: white;
+    padding: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+    height: 3rem;
+    width: 6rem;
+    border-radius: 3rem;
+    /* margin-top: 2rem; */
+}
