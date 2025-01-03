@@ -1,0 +1,21 @@
+.Header {
+    background-color: gray;
+}
+
+.Header-banner {
+    background-color: gray;
+    color: antiquewhite;
+    padding: 1rem;
+    font-size: xx-large;
+}
+
+.Header-info {
+    background-color: gray;
+    color:bisque;
+    margin: auto;
+    padding: 0.2rem;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

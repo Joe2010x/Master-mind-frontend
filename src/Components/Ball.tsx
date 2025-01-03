@@ -14,34 +14,42 @@ export const ballGenerate = (num : number) => {
     return result;
 }
 
+export const ColorList : string[] = [
+    "Maroon", "#ba8e23","Orange", "Green","Teal","Blue","Navy","Purple",
+]
+
 export const ballCollections : BallType[] = [
     {
         backgroundColor :  "lightgray",
-        core : "#194D33"
+        core : ColorList[0]
     },
     {
         backgroundColor :  "lightgray",
-        core : "#3F51B5"
+        core : ColorList[1]
     },
     {
         backgroundColor :  "lightgray",
-        core : "#673AB7"
+        core : ColorList[2]
     },
     {
         backgroundColor :  "lightgray",
-        core : "#9C27B0"
+        core : ColorList[3]
     },
     {
         backgroundColor :  "lightgray",
-        core : "#E91E63"
+        core : ColorList[4]
     },
     {
         backgroundColor :  "lightgray",
-        core : "#F44336"
+        core : ColorList[5]
     },
     {
         backgroundColor :  "lightgray",
-        core : "#795548"
+        core : ColorList[6]
+    },
+    {
+        backgroundColor :  "lightgray",
+        core : ColorList[7]
     },
 ]
 
@@ -49,28 +57,18 @@ interface propsType
 {
     ball : BallType;
     size? : number;
-    index : number;
-    status : string;
-    setDragData : (value : string) => void;
-    // setDropIndex? : (value : number) => void  ;
+    index? : number;
+    status? : string;
+    setDragData? : (value : string) => void;
 }
 
 export const Ball = ({ball, size, setDragData, index, status} : propsType ) => {
-    //console.log("ball refreshed ",setDropIndex);
     const handleOnDrag = (e: React.DragEvent, color : string) => 
     {
         e.dataTransfer.setData("color", color);
-        console.log("draged color,",color);
-        setDragData(color);
+        if (setDragData!== undefined) setDragData(color);
     }
 
-    // const handleOnDrop = (e: React.DragEvent) => {
-    //     e.preventDefault();
-    //     console.log("dropped", status, index);
-    //     if (status === "confirmed") return;
-    //     if (setDropIndex != undefined) setDropIndex(index);
-    //     else console.log("dropIndex not operated");
-    // }
 
     return (
         <div className="BallBackground" 

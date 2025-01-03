@@ -1,19 +1,21 @@
 import "./CSS/Result.css";
 
 interface ResultType {
-    colors : string[]
+    colors : string[],
+    width : number,
+    height : number,
 }
 
-// export const ResultDefault = ["yellow","yellow","yellow","yellow"];
-// export const ResultDefault = ["black","black","black","black"];
 export const ResultDefault = ["white","white","white","white"];
 
-// black : right color right position, dark_orange : right color
-
-export const Result = ({colors}:ResultType) => {
-    console.log(colors);
+export const Result = ({colors, width, height}:ResultType) => {
+    let style = {
+        width : width + "rem",
+        height : height + "rem"
+    }
+    
     return (
-        <div className="Result">
+        <div className="Result" style={style}>
             {colors.map((c,index) => 
             <div className="IndividualResultOutter" 
                 key={index} 
